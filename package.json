@@ -1,0 +1,12 @@
+{
+  "name": "gemini-design",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Social media design workspace — Gemini-powered HTML carousels exported to PNG",
+  "scripts": {
+    "export": "node scripts/export-png.js"
+  },
+  "dependencies": {
+    "puppeteer": "^24.15.0"
+  }
+}

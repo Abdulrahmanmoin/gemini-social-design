@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Three Column Comparison — Template</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: #0f0f10;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 24px;
+      padding: 40px 0;
+      font-family: 'Inter', sans-serif;
+    }
+    .slide {
+      width: 1080px;
+      height: 1080px;          /* square — LOCKED */
+      overflow: hidden;
+      position: relative;
+      background: #faf7f2;
+      padding: 80px;
+      display: flex;
+      flex-direction: column;
+      gap: 48px;
+      color: #1a1a1a;
+    }
+    .header h1 {
+      font-family: 'Bricolage Grotesque', sans-serif;
+      font-weight: 800;
+      font-size: 72px;
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+    }
+    .header h1 .accent {
+      color: #db2777;
+    }
+    .header .sub {
+      margin-top: 16px;
+      font-size: 26px;
+      color: #555;
+    }
+    .grid {
+      flex: 1;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .col {
+      border-radius: 24px;
+      padding: 36px 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .col.a { background: #fce7f3; }
+    .col.b { background: #ffedd5; }
+    .col.c { background: #fef9c3; }
+    .col-title {
+      font-family: 'Bricolage Grotesque', sans-serif;
+      font-weight: 700;
+      font-size: 36px;
+      line-height: 1.1;
+    }
+    .col-title .label {
+      display: block;
+      font-size: 22px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      font-weight: 600;
+      color: #555;
+      margin-bottom: 8px;
+    }
+    .col ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .col li {
+      font-size: 24px;
+      line-height: 1.35;
+      padding-left: 28px;
+      position: relative;
+      color: #2a2a2a;
+    }
+    .col li::before {
+      content: '✦';
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: #db2777;
+      font-weight: 700;
+    }
+    .col.b li::before { color: #ea580c; }
+    .col.c li::before { color: #ca8a04; }
+    .footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 22px;
+      color: #666;
+    }
+    .footer .handle { font-weight: 600; color: #1a1a1a; }
+  </style>
+</head>
+<body>
+  <div class="slide">
+    <div class="header">
+      <h1>Option A vs B vs C — <span class="accent">which when?</span></h1>
+      <div class="sub">A quick decision framework for {{audience}}.</div>
+    </div>
+
+    <div class="grid">
+      <div class="col a">
+        <div class="col-title"><span class="label">Use when</span>Option A</div>
+        <ul>
+          <li>Reason one for picking A</li>
+          <li>Reason two for picking A</li>
+          <li>Reason three for picking A</li>
+        </ul>
+      </div>
+      <div class="col b">
+        <div class="col-title"><span class="label">Use when</span>Option B</div>
+        <ul>
+          <li>Reason one for picking B</li>
+          <li>Reason two for picking B</li>
+          <li>Reason three for picking B</li>
+        </ul>
+      </div>
+      <div class="col c">
+        <div class="col-title"><span class="label">Use when</span>Option C</div>
+        <ul>
+          <li>Reason one for picking C</li>
+          <li>Reason two for picking C</li>
+          <li>Reason three for picking C</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="handle">@yourhandle</div>
+      <div>Save this for later →</div>
+    </div>
+  </div>
+</body>
+</html>

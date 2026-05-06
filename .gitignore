@@ -1,0 +1,15 @@
+# Generated designs (HTML output and PNG exports)
+designs/
+
+# Node
+node_modules/
+npm-debug.log*
+
+# Puppeteer Chromium cache
+.cache/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
